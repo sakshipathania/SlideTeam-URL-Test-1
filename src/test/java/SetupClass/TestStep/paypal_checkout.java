@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
@@ -17,7 +18,8 @@ import cucumber.api.java.en.Then;
 public class paypal_checkout extends Set {
 	
 	WebDriverWait wait = new WebDriverWait(driver,10);
-
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+	
 	@Given("^user is already on Website Home Page pp$")
 	public void user_is_already_on_Website_Home_Page_pp() throws Throwable {
 		
@@ -248,10 +250,11 @@ public class paypal_checkout extends Set {
 		    System.out.println("Title of the Page is --> "+pp_page_title);
 		    
 		 // place order button 
-			 //WebElement cancel_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(.,'Cancel and return to Slideteam Pte. Ltd.')])[2]")));
-			//	Thread.sleep(2000);
-			  //  cancel_order_btn.click();
-			//	Thread.sleep(5000);
+			 WebElement cancel_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(.,'Cancel and return to Slideteam Pte. Ltd.')])[2]")));
+				js.executeScript("arguments[0].scrollIntoView();",cancel_order_btn);
+		Thread.sleep(2000);
+			    cancel_order_btn.click();
+				Thread.sleep(5000);
 
 				 // Switch To Default Window
 				  
