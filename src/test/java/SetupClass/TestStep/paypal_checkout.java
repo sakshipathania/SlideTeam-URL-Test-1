@@ -153,7 +153,7 @@ public class paypal_checkout extends Set {
 	   
 		// choose a plan
 		 WebElement join_now_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]//div[3]//span[1]//form[1]//button[1]//span[1]")));
-		js.executeScript("arguments[0].scrollIntoView();"join_now_btn);	
+		js.executeScript("arguments[0].scrollIntoView();",join_now_btn);	
 		Thread.sleep(2000);
 		    join_now_btn.click();
 			Thread.sleep(5000);
@@ -185,7 +185,7 @@ public class paypal_checkout extends Set {
 		try
 		{
 			  WebElement place_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Place Order')]")));
-			js.executeScript("arguments[0].scrollIntoView();"place_order_btn);	
+			js.executeScript("arguments[0].scrollIntoView();",place_order_btn);	
 			Thread.sleep(3000);
 		          place_order_btn.click();
 			  Thread.sleep(5000);
@@ -303,11 +303,11 @@ try {
 
 
 		 WebElement delete_account = driver.findElement(By.xpath("//a[contains(text(),'Delete Account')]"));
-		js.executeScript("arguments[0].scrollIntoView();"delete_account);
+		js.executeScript("arguments[0].scrollIntoView();",delete_account);
 		 delete_account.click();
 		 Thread.sleep(3000);
 		 WebElement continue_delete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Continue')]")));
-		js.executeScript("arguments[0].scrollIntoView();"continue_delete); 
+		js.executeScript("arguments[0].scrollIntoView();",continue_delete); 
 		continue_delete.click();
 		 Thread.sleep(3000);
 		
