@@ -163,8 +163,11 @@ public class sign_up_correct_data extends Set {
 
 	@Then("^user delete the new account created cd$")
 	public void user_delete_the_new_account_created_cd() throws InterruptedException  {
-	    
-
+        Thread.sleep(3000);
+	    driver.get("https://www.slideteam.net/");
+		Thread.sleep(2000);
+		
+	   
 		 driver.findElement(By.cssSelector("ul.header > li:nth-child(1) > a:nth-child(1)")).click();
 		 Thread.sleep(3000);
 		 
