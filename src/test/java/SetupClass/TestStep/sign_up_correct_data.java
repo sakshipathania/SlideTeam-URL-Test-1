@@ -167,7 +167,7 @@ public class sign_up_correct_data extends Set {
 	    driver.get("https://www.slideteam.net/");
 		Thread.sleep(2000);
 		
-	   driver.findElement(By.xpath("//a[contains(.,'My Account')]")).click()
+	   driver.findElement(By.xpath("//a[contains(.,'My Account')]")).click();
 		 Thread.sleep(3000);
 		 
 		
