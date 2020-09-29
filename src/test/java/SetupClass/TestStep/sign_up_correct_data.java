@@ -143,7 +143,7 @@ public class sign_up_correct_data extends Set {
 		Thread.sleep(2000);
 		WebElement free_ppt_btn1=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'Free Stuff')]")));
 		Thread.sleep(2000);
-		WebElement free_ppt_btn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'Free Stuff')]")));
+		WebElement free_ppt_btn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'Free PPTs')]")));
 	    free_ppt_btn.click();
 	    Thread.sleep(2000);
 	   
