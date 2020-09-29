@@ -141,8 +141,9 @@ public class sign_up_correct_data extends Set {
 	public void user_lands_on_pricing_page_and_then_user_go_to_free_ppts_page_cd() throws InterruptedException  {
 		
 		Thread.sleep(2000);
-		WebElement free_ppt_btn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'Free PPTs')]")));
+		WebElement free_ppt_btn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'Free Stuff')]")));
 		Thread.sleep(2000);
+		WebElement free_ppt_btn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'Free Stuff')]")));
 	    free_ppt_btn.click();
 	    Thread.sleep(2000);
 	   
