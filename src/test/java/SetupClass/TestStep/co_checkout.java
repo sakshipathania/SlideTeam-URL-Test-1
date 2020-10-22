@@ -167,7 +167,7 @@ public class co_checkout extends Set{
 	@Then("^user is redirected to pricing page and choose a plan to pay (\\d+)CO$")
 	public void user_is_redirected_to_pricing_page_and_choose_a_plan_to_pay_CO(int arg1) throws Throwable {
 		// choose a plan
-		
+		Thread.sleep(4000);
 		driver.get("https://www.slideteam.net/pricing?utm_expid=.ob6CI18MTrailD_9AQRC-g.0&utm_referrer=https%3A%2F%2Fwww.slideteam.net%2Fpricing");
 		Thread.sleep(3000);
 		js.executeScript("window.scrollBy(0,1000)");
