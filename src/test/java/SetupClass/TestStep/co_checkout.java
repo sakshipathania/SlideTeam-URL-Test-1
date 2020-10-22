@@ -152,15 +152,15 @@ public class co_checkout extends Set{
 		WebElement old_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='email']")));
 		js.executeScript("arguments[0].scrollIntoView();",old_email);
 		Thread.sleep(1000);
-	    old_email.sendKeys("himanshi@test.com");
+	    old_email.sendKeys("Qwerty120@gmail.com");
 	    Thread.sleep(1000);
 	    WebElement old_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='pass']")));
 		js.executeScript("arguments[0].scrollIntoView();",old_pass);
 	    Thread.sleep(1000);
-	    old_pass.sendKeys("123456");
-	    Thread.sleep(1000);
+	    old_pass.sendKeys("Qwerty@1");
+	    Thread.sleep(5000);
 	     WebElement old_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.login > span:nth-child(1)")));
-		 Thread.sleep(1000);
+		 Thread.sleep(3000);
 		    old_login_btn.click();
 	}
 
