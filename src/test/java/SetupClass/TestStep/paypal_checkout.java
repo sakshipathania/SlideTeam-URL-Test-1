@@ -84,7 +84,7 @@ public class paypal_checkout extends Set {
 		
 		// create new email for sign up
 		
-		int leftLimit = 97; // letter 'a'
+		/*int leftLimit = 97; // letter 'a'
 	    int rightLimit = 122; // letter 'z'
 	    int targetStringLength = 10;
 	    Random random = new Random();
@@ -144,7 +144,21 @@ public class paypal_checkout extends Set {
 		    WebElement new_btn_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".submit")));
 			Thread.sleep(2000);
 		    new_btn_signup.click();
-			Thread.sleep(2000);
+			Thread.sleep(2000);*/
+		Thread.sleep(1000);
+		WebElement old_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='email']")));
+		js.executeScript("arguments[0].scrollIntoView();",old_email);
+		Thread.sleep(1000);
+	    old_email.sendKeys("himanshi@test.com");
+	    Thread.sleep(1000);
+	    WebElement old_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='pass']")));
+		js.executeScript("arguments[0].scrollIntoView();",old_pass);
+	    Thread.sleep(1000);
+	    old_pass.sendKeys("123456");
+	    Thread.sleep(1000);
+	     WebElement old_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.login > span:nth-child(1)")));
+		 Thread.sleep(1000);
+		    old_login_btn.click();
 	    
 	}
 
@@ -272,7 +286,7 @@ public class paypal_checkout extends Set {
 		Thread.sleep(2000);
 		
 
-		 driver.findElement(By.xpath("//a[contains(.,'My Account')]")).click();
+		/* driver.findElement(By.xpath("//a[contains(.,'My Account')]")).click();
 		 Thread.sleep(3000);
 		 
 		
@@ -313,7 +327,7 @@ try {
 		 WebElement continue_delete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Continue')]")));
 		js.executeScript("arguments[0].scrollIntoView();",continue_delete);
 		continue_delete.click();
-		 Thread.sleep(3000);
+		 Thread.sleep(3000);*/
 		
 	}
 
