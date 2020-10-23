@@ -74,8 +74,8 @@ public class co_checkout extends Set{
 	public void user_navigates_to_sign_up_page_CO(int arg1) throws Throwable {
 		Thread.sleep(3000);
 		try {
-			//driver.findElement(By.cssSelector("ul.header > li:nth-child(1) > a:nth-child(1)")).click();
-			driver.get("https://www.slideteam.net/customer/account/login/referer/aHR0cHM6Ly93d3cuc2xpZGV0ZWFtLm5ldC9jdXN0b21lci9hY2NvdW50L2luZGV4Lw%2C%2C/");
+			driver.findElement(By.cssSelector("ul.header > li:nth-child(1) > a:nth-child(1)")).click();
+			//driver.get("https://www.slideteam.net/customer/account/login/referer/aHR0cHM6Ly93d3cuc2xpZGV0ZWFtLm5ldC9jdXN0b21lci9hY2NvdW50L2luZGV4Lw%2C%2C/");
 			Thread.sleep(2000);
 			log.info("It's opening the website URL and redirect user to sign up page");
 		} 
@@ -87,7 +87,7 @@ public class co_checkout extends Set{
 	public void user_create_a_new_ac_count_CO(int arg1) throws Throwable {
 		// create new email for sign up
 		
-			/*	int leftLimit = 97; // letter 'a'
+				int leftLimit = 97; // letter 'a'
 			    int rightLimit = 122; // letter 'z'
 			    int targetStringLength = 10;
 			    Random random = new Random();
@@ -147,8 +147,8 @@ public class co_checkout extends Set{
 				    WebElement new_btn_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".submit")));
 					Thread.sleep(2000);
 				    new_btn_signup.click();
-					Thread.sleep(2000); */
-		Thread.sleep(1000);
+					Thread.sleep(2000); 
+		/*Thread.sleep(1000);
 		WebElement old_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='email']")));
 		js.executeScript("arguments[0].scrollIntoView();",old_email);
 		Thread.sleep(1000);
@@ -161,7 +161,7 @@ public class co_checkout extends Set{
 	    Thread.sleep(5000);
 	     WebElement old_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.login > span:nth-child(1)")));
 		 Thread.sleep(3000);
-		    old_login_btn.click();
+		    old_login_btn.click();*/
 	}
 
 	@Then("^user is redirected to pricing page and choose a plan to pay (\\d+)CO$")
@@ -239,7 +239,7 @@ public class co_checkout extends Set{
 		Thread.sleep(2000);
 		
 
-		/*driver.findElement(By.xpath("//a[contains(.,'My Account')]")).click();
+		driver.findElement(By.xpath("//a[contains(.,'My Account')]")).click();
 		 Thread.sleep(3000);
 		 
 		
@@ -280,7 +280,7 @@ try {
 		 WebElement continue_delete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Continue')]")));
 		js.executeScript("arguments[0].scrollIntoView();",continue_delete);
 		continue_delete.click();
-		 Thread.sleep(3000);*/
+		 Thread.sleep(3000);
 	}
 
 
