@@ -754,10 +754,10 @@ public class paypal_checkout extends Set {
 		Education.click();
 		Thread.sleep(3000);
 		//js.executeScript("window.scrollBy(0,1000)");
-		 WebElement join_now_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]//div[3]//span[1]//form[1]//button[1]//span[1]")));
-		js.executeScript("arguments[0].scrollIntoView();",join_now_btn);	
+		 WebElement join_now_btn1  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Education > div > div.slide-product > div.col-box.table-col.item.education_call.last.control > div.col.col2.col-bg2 > span > form > button > span")));
+		js.executeScript("arguments[0].scrollIntoView();",join_now_btn1);	
 		Thread.sleep(2000);
-		    join_now_btn.click();
+		    join_now_btn1.click();
 			Thread.sleep(5000);
 	
 		    try
@@ -774,10 +774,10 @@ public class paypal_checkout extends Set {
 		Thread.sleep(1000);
 		   try {
 			
-		 WebElement place_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Place Order')]")));
-			js.executeScript("arguments[0].scrollIntoView();",place_order_btn);	
+		 WebElement place_order_btna  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Place Order')]")));
+			js.executeScript("arguments[0].scrollIntoView();",place_order_btna);	
 			Thread.sleep(3000);
-		          place_order_btn.click();
+		          place_order_btna.click();
 			  Thread.sleep(5000);
 			   
 		} catch (NoSuchElementException popup) {
