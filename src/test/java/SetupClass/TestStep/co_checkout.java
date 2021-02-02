@@ -657,7 +657,85 @@ public class co_checkout extends Set{
 	    	System.out.println("user is on the wrong page");
 	    	log.info("USER IS ON THE WRONG PAGE");
 	    }
+		String actualTitle = "$149.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle = "$149.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text $149.99 is present and correct');");
 		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+		Thread.sleep(3000);
+		 driver.get("https://www.slidegeeks.com/component/pago/checkout");
+		Thread.sleep(2000);
+		 driver.get("https://www.slidegeeks.com/subscriptions");
+		Thread.sleep(2000);
+		WebElement Business_Team1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[2]")));
+				Thread.sleep(2000);
+		Business_Team1.click();
+		Thread.sleep(3000);
+		//js.executeScript("window.scrollBy(0,1000)");
+		 WebElement join_now_btn1  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/div/div[2]/div/div[2]/div[2]/div[3]/span/form/button/span")));
+			Thread.sleep(2000);
+		    join_now_btn1.click();
+		 try {
+		Thread.sleep(1400);
+		// select 2co option
+		WebElement co_btn1  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#tco_checkout")));
+		Thread.sleep(2000);
+	         co_btn1.click();
+		Thread.sleep(5000);
+		
+	     } catch( NoSuchElementException popup) { 
+	     }
+		
+		// place order button 
+		try {
+			
+		  WebElement place_order_btn1  =  driver.findElement(By.cssSelector("#place-order-trigger > span"));
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].scrollIntoView();",place_order_btn1);	
+			//js.executeScript("arguments[0].click();", place_order_btn);
+			Thread.sleep(2000);
+		    place_order_btn1.click();
+			Thread.sleep(5000);
+		} catch (NoSuchElementException popup) {
+		}
+		String co_page_title1=driver.getTitle();
+		Thread.sleep(3000);
+	    System.out.println("Title of the Page is --> "+co_page_title);
+	    
+	    String page_title1="2Checkout";
+	    
+	    if(page_title.equalsIgnoreCase(co_page_title))
+	    {
+	    	System.out.println(" user is on the 2checkout page");
+	    	log.info("USER IS ON THE 2CHECKOUT PAGE");
+	    }
+	    else
+	    {
+	    	System.out.println("user is on the wrong page");
+	    	log.info("USER IS ON THE WRONG PAGE");
+	    }
+		String actualTitle1 = "$299.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		String expectedTitle1 = "$299.99";
+		Thread.sleep(1000);
+		//wait.implictywait(driver);
+		Assert.assertEquals(expectedTitle, actualTitle);
+		Thread.sleep(2000);
+		js.executeScript("alert('Text $299.99 is present and correct');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		//wait.implictywait(driver);
+		Thread.sleep(5000);
+		
 	}
 
 	@Then("^user deleted the account (\\d+)CO$")
