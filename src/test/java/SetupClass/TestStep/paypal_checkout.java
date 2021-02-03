@@ -788,12 +788,12 @@ public class paypal_checkout extends Set {
 		Thread.sleep(2000);
 			    cancel_order_btn.click();
 				Thread.sleep(5000);*/
-		if(driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[1]/div[2]/div[1]/input")).isDisplayed())
-		{  WebElement PP_Email1 = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[1]/div[2]/div[1]/input"));
+		
+		WebElement PP_Email1 = driver.findElement(By.id("email"));
                          Thread.sleep(2000);
 		   PP_Email1.sendKeys("tatvashardul-buyer@gmail.com");
 		   Thread.sleep(2000);
-		   WebElement Next_2 = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[2]/button"));
+		   WebElement Next_2 = driver.findElement(By.id("btnNext"));
 							 Thread.sleep(3000);
 		 Next_2.click();
 		  Thread.sleep(3000);
