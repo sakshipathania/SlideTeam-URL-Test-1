@@ -828,7 +828,7 @@ public class paypal_checkout extends Set {
 		 driver.get("https://www.slideteam.net/checkout/");
 		Thread.sleep(2000);
 				 // Switch To Default Window
-				  driver.get("https://www.slidegeeks.com/component/pago/checkout");
+				  driver.get("https://www.slideteam.net/checkout/");
 				 // driver.switchTo().window(currentWindow);
 			 }
 		    
