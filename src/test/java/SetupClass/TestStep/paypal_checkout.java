@@ -725,15 +725,15 @@ public class paypal_checkout extends Set {
 							 Thread.sleep(3000);
 		 Next_1.click();
 		  Thread.sleep(3000);
-		   String actualTitle = "$1,599.99";
+		   String actualTitle = "$249.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
-		String expectedTitle = "$1,599.99";
+		String expectedTitle = "$249.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
 		Thread.sleep(2000);
-		js.executeScript("alert('Text $1,599.99 is present and correct');");
+		js.executeScript("alert('Text $249.99 is present and correct');");
 		Thread.sleep(3000);
 		driver.switchTo().alert().accept();
 		//wait.implictywait(driver);
@@ -834,12 +834,12 @@ public class paypal_checkout extends Set {
 		driver.switchTo().alert().accept();
 		//wait.implictywait(driver);
 		Thread.sleep(5000);
-		Thread.sleep(3000);
-		 WebElement cancel_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(.,'Cancel and return to Slideteam Pte. Ltd.')])[2]")));
-				js.executeScript("arguments[0].scrollIntoView();",cancel_order_btn);
-		Thread.sleep(2000);
-			    cancel_order_btn.click();
-				Thread.sleep(5000);
+		//Thread.sleep(3000);
+		// WebElement cancel_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(.,'Cancel and return to Slideteam Pte. Ltd.')])[2]")));
+				//js.executeScript("arguments[0].scrollIntoView();",cancel_order_btn);
+		//Thread.sleep(2000);
+			   // cancel_order_btn.click();
+				//Thread.sleep(5000);
 			 
 			
 				 // Switch To Default Window
