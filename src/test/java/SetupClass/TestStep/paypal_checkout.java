@@ -817,14 +817,12 @@ public class paypal_checkout extends Set {
 		Thread.sleep(2000);
 			    cancel_order_btn.click();
 				Thread.sleep(5000);
-			 }
-			 else {
-		 driver.get("https://www.slideteam.net/checkout/");
-		Thread.sleep(2000);
+			 
+			
 				 // Switch To Default Window
 				  driver.get("https://www.slideteam.net/checkout/");
 				 // driver.switchTo().window(currentWindow);
-			 }
+			 
 		    
 		 // place order button 
 			 
