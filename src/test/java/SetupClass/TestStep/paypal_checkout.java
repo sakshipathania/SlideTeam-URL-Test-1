@@ -777,6 +777,25 @@ public class paypal_checkout extends Set {
 		} catch (NoSuchElementException popup) {
 		}
 		         Thread.sleep(3000);
+		  driver.manage().window().maximize();
+		
+		  // Store the CurrentWindow for future reference
+		 // String handle = " ";
+		  String currentWindow = driver.getWindowHandle();
+		  String popupWindowHandle = null;
+		   
+		  // Switch To Popup Window
+		  
+		  for(String handle : driver.getWindowHandles()){
+		   if(!handle.equals(currentWindow)){
+		    
+		    popupWindowHandle = handle;
+		     driver.switchTo().window(popupWindowHandle);
+			   driver.manage().window().maximize();
+		   }
+		  }
+		  
+		
 			 // page title
 		  String pp_page_title1=driver.getTitle();
 			Thread.sleep(3000);
