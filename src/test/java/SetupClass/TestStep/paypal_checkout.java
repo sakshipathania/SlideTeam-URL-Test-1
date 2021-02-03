@@ -789,6 +789,10 @@ public class paypal_checkout extends Set {
 			    cancel_order_btn.click();
 				Thread.sleep(5000);*/
 		Thread.sleep(5000);
+		WebElement Click_to_Continue = driver.findElement(By.cssSelector("#zoid-paypal-checkout-62c4d4ee31 > div.paypal-checkout-modal > div.paypal-checkout-continue > a"));
+		Thread.sleep(5000);
+		Click_to_Continue.click();
+		Thread.sleep(2000);
 		WebElement PP_Email1 = driver.findElement(By.id("email"));
                          Thread.sleep(2000);
 		   PP_Email1.sendKeys("tatvashardul-buyer@gmail.com");
