@@ -753,7 +753,7 @@ public class paypal_checkout extends Set {
 				Thread.sleep(2000);
 		Education.click();
 		Thread.sleep(3000);
-		//js.executeScript("window.scrollBy(0,1000)");
+		js.executeScript("window.scrollBy(0,1000)");
 		 WebElement join_now_btn1  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Education > div > div.slide-product > div.col-box.table-col.item.education_call.last.control > div.col.col2.col-bg2 > span > form > button > span")));
 		js.executeScript("arguments[0].scrollIntoView();",join_now_btn1);	
 		Thread.sleep(2000);
