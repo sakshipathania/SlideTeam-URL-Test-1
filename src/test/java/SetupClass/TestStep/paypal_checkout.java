@@ -798,13 +798,13 @@ public class paypal_checkout extends Set {
 		 Next_2.click();
 		  Thread.sleep(3000);
 			 Thread.sleep(3000);
-		   String actualTitle = "$1,999.99";
+		   String actualTitle1 = "$1,999.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
-		String expectedTitle = "$1,999.99";
+		String expectedTitle1 = "$1,999.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
-		Assert.assertEquals(expectedTitle, actualTitle);
+		Assert.assertEquals(expectedTitle1, actualTitle1);
 		Thread.sleep(2000);
 		js.executeScript("alert('Text $1,999.99 is present and correct');");
 		Thread.sleep(3000);
