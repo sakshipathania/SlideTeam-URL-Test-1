@@ -599,7 +599,7 @@ public class co_checkout extends Set{
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(3000);
 		js.executeScript("window.scrollBy(0,1000)");
-		 WebElement join_now_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div[3]/span/form/button/span")));
+		 WebElement join_now_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Individual > div > div.slide-product > div:nth-child(2) > div.col.col2.col-bg2 > span > form > button > span")));
 			Thread.sleep(2000);
 		    join_now_btn.click();
 			Thread.sleep(6000);
