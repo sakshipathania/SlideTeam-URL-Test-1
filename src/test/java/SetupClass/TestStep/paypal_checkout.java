@@ -716,12 +716,12 @@ public class paypal_checkout extends Set {
 		    System.out.println("Title of the Page is --> "+pp_page_title);
 		    //Paypal Page
 		
-		if(driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[1]/div[2]/div[1]/input")).isDisplayed())
-		{  WebElement PP_Email = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[1]/div[2]/div[1]/input"));
+	
+		 WebElement PP_Email = driver.findElement(By.id("email"));
                          Thread.sleep(2000);
 		   PP_Email.sendKeys("tatvashardul-buyer@gmail.com");
 		   Thread.sleep(2000);
-		   WebElement Next_1 = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/form/div[3]/div[2]/button"));
+		   WebElement Next_1 = driver.findElement(By.id("btnNext"));
 							 Thread.sleep(3000);
 		 Next_1.click();
 		  Thread.sleep(3000);
@@ -740,13 +740,7 @@ public class paypal_checkout extends Set {
 		Thread.sleep(5000);
 		driver.get("https://www.slideteam.net/checkout/");
 		Thread.sleep(2000);	
-		}
-		else {
-		Thread.sleep(3000);
-		 driver.get("https://www.slideteam.net/checkout/");
-		Thread.sleep(2000);
-		}
-		Thread.sleep(2000);
+		
 		 driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(2000);
 		   WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[3]")));
