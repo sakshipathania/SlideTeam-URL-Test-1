@@ -675,9 +675,9 @@ public class co_checkout extends Set{
 		Thread.sleep(2000);
 		 driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(2000);
-		WebElement Business_Team1 =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[2]")));
-				Thread.sleep(2000);
-		Business_Team1.click();
+		//WebElement Business_Team =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[2]")));
+				//Thread.sleep(2000);
+		//Business_Team.click();
 		Thread.sleep(3000);
 		//js.executeScript("window.scrollBy(0,1000)");
 		 WebElement join_now_btn1  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/div/div[1]/div/div[2]/div[4]/div[3]/span/form/button/span")));
@@ -736,6 +736,7 @@ public class co_checkout extends Set{
 		//wait.implictywait(driver);
 		Thread.sleep(5000);
 		
+		 driver.get("https://www.slideteam.net/checkout/");
 	}
 
 	@Then("^user deleted the account (\\d+)CO$")
