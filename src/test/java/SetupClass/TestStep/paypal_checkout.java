@@ -853,6 +853,11 @@ public class paypal_checkout extends Set {
 				 // Switch To Default Window
 				  
 				  driver.switchTo().window(currentWindow);
+		Thread.sleep(3000);
+		WebElement Click_to_Continue = driver.findElement(By.cssSelector("#zoid-paypal-checkout-62c4d4ee31 > div.paypal-checkout-modal > div.paypal-checkout-continue > a"));
+		Thread.sleep(5000);
+		Click_to_Continue.click();
+		Thread.sleep(2000);
 		    
 	}
 
