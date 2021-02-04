@@ -842,22 +842,26 @@ public class paypal_checkout extends Set {
 				//Thread.sleep(5000);
 			 
 			
-				 // Switch To Default Window
-				  driver.get("https://www.slideteam.net/checkout/");
+				driver.get("https://www.slideteam.net/checkout/");
+		Thread.sleep(2000);	
+		
+		// Switch To Default Window
+				  
+				  driver.switchTo().window(currentWindow);
+		 driver.get("https://www.slideteam.net/pricing");
+		Thread.sleep(2000);
 				 // driver.switchTo().window(currentWindow);
 			 
 		    
 		 // place order button 
 			 
 
-				 // Switch To Default Window
-				  
-				  driver.switchTo().window(currentWindow);
-		Thread.sleep(3000);
-		WebElement Click_to_Continue = driver.findElement(By.cssSelector("#zoid-paypal-checkout-b420ea11ec > a"));
-		Thread.sleep(5000);
-		Click_to_Continue.click();
-		Thread.sleep(4000);
+				 
+		//Thread.sleep(3000);
+		//WebElement Click_to_Continue = driver.findElement(By.cssSelector("#zoid-paypal-checkout-b420ea11ec > a"));
+		//Thread.sleep(5000);
+		//Click_to_Continue.click();
+		//Thread.sleep(4000);
 		    
 	}
 
