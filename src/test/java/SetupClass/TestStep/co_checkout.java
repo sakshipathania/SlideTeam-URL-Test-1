@@ -746,7 +746,7 @@ public class co_checkout extends Set{
 		Thread.sleep(2000);
 		
 
-		driver.findElement(By.xpath("//a[contains(.,'My Account')]")).click();
+		/*driver.findElement(By.xpath("//a[contains(.,'My Account')]")).click();
 		 Thread.sleep(3000);
 		 
 		
@@ -793,7 +793,18 @@ try {
 		js.executeScript("arguments[0].scrollIntoView();",delete_profile);
 		delete_profile.click();
 		 Thread.sleep(3000);
-	}
+	}*/
+		try {
+			WebElement logout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
+			if (logout.isEnabled()) {
+				logout.click();
+				Thread.sleep(8000);
+				driver.navigate().refresh();
+				Thread.sleep(2000);
+			}
+		} catch (NoSuchElementException Ext) {
+
+		}
 
 
 	
