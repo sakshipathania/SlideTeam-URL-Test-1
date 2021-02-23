@@ -784,8 +784,13 @@ try {
 		js.executeScript("arguments[0].scrollIntoView();",delete_account);
 		 delete_account.click();
 		 Thread.sleep(3000);
-		 WebElement continue_delete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Continue')]")));
-		js.executeScript("arguments[0].scrollIntoView();",continue_delete);
+		WebElement delete_reason = driver.findElement(By.cssSelector("#exampleRadios1"));
+		Thread.sleep(3000);
+		delete_reason.click();
+		Thread.sleep(3000);
+		
+		 WebElement delete_profile = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Delete Profile')]")));
+		js.executeScript("arguments[0].scrollIntoView();",delete_profile);
 		continue_delete.click();
 		 Thread.sleep(3000);
 	}
