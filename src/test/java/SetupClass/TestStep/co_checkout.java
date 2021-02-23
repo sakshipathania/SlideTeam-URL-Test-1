@@ -723,15 +723,15 @@ public class co_checkout extends Set{
 	    	System.out.println("user is on the wrong page");
 	    	log.info("USER IS ON THE WRONG PAGE");
 	    }
-		String actualTitle1 = "$299.99";
+		String actualTitle1 = "$49.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
-		String expectedTitle1 = "$299.99";
+		String expectedTitle1 = "$49.99";
 		Thread.sleep(1000);
 		//wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
 		Thread.sleep(2000);
-		js.executeScript("alert('Text $299.99 is present and correct');");
+		js.executeScript("alert('Text $49.99 is present and correct');");
 		Thread.sleep(3000);
 		driver.switchTo().alert().accept();
 		//wait.implictywait(driver);
