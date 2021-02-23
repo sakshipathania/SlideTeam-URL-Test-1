@@ -743,19 +743,19 @@ public class paypal_checkout extends Set {
 		
 		 driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(2000);
-		   WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[3]")));
-				Thread.sleep(2000);
-		Education.click();
-		Thread.sleep(3000);
-		js.executeScript("window.scrollBy(0,1000)");
-		 WebElement join_now_btn1  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Education > div > div.slide-product > div.col-box.table-col.item.education_call.last.control > div.col.col2.col-bg2 > span > form > button > span")));
-			Thread.sleep(6000);
-		js.executeScript("arguments[0].scrollIntoView();",join_now_btn1);	
-		Thread.sleep(2000);
-		    join_now_btn1.click();
-			Thread.sleep(5000);
+		 //  WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[3]")));
+				//Thread.sleep(2000);
+		//Education.click();
+		//Thread.sleep(3000);
+		//js.executeScript("window.scrollBy(0,1000)");
+		// WebElement join_now_btn1  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Education > div > div.slide-product > div.col-box.table-col.item.education_call.last.control > div.col.col2.col-bg2 > span > form > button > span")));
+			//Thread.sleep(6000);
+		//js.executeScript("arguments[0].scrollIntoView();",join_now_btn1);	
+		//Thread.sleep(2000);
+		 //   join_now_btn1.click();
+			//Thread.sleep(5000);
 	
-		    try
+		/*    try
 		{
 			WebElement cp_btn1  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='paypal_express']")));
 			Thread.sleep(2000);
@@ -808,33 +808,33 @@ public class paypal_checkout extends Set {
 		Thread.sleep(2000);
 			    cancel_order_btn.click();
 				Thread.sleep(5000);*/
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		//WebElement Click_to_Continue = driver.findElement(By.cssSelector("#zoid-paypal-checkout-62c4d4ee31 > div.paypal-checkout-modal > div.paypal-checkout-continue > a"));
 		//Thread.sleep(5000);
 		//Click_to_Continue.click();
 		//Thread.sleep(2000);
-		 WebElement PP_Email1 = driver.findElement(By.id("email"));
-                         Thread.sleep(2000);
-		   PP_Email1.sendKeys("tatvashardul-buyer@gmail.com");
-		   Thread.sleep(2000);
-		   WebElement Next_2 = driver.findElement(By.id("btnNext"));
-							 Thread.sleep(3000);
-		 Next_2.click();
-		  Thread.sleep(3000);
-			 Thread.sleep(3000);
-		   String actualTitle1 = "$1,999.99";
-		Thread.sleep(1000);
+		// WebElement PP_Email1 = driver.findElement(By.id("email"));
+                   //      Thread.sleep(2000);
+		//   PP_Email1.sendKeys("tatvashardul-buyer@gmail.com");
+		 //  Thread.sleep(2000);
+		 //  WebElement Next_2 = driver.findElement(By.id("btnNext"));
+				//			 Thread.sleep(3000);
+		// Next_2.click();
+		//  Thread.sleep(3000);
+			 //Thread.sleep(3000);
+		  // String actualTitle1 = "$1,999.99";
+		//Thread.sleep(1000);
 		//wait.implictywait(driver);
-		String expectedTitle1 = "$1,999.99";
-		Thread.sleep(1000);
+		//String expectedTitle1 = "$1,999.99";
+		//Thread.sleep(1000);
 		//wait.implictywait(driver);
-		Assert.assertEquals(expectedTitle1, actualTitle1);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text $1,999.99 is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept();
+		//Assert.assertEquals(expectedTitle1, actualTitle1);
+		//Thread.sleep(2000);
+		//js.executeScript("alert('Text $1,999.99 is present and correct');");
+		//Thread.sleep(3000);
+		//driver.switchTo().alert().accept();
 		//wait.implictywait(driver);
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		//Thread.sleep(3000);
 		// WebElement cancel_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(.,'Cancel and return to Slideteam Pte. Ltd.')])[2]")));
 				//js.executeScript("arguments[0].scrollIntoView();",cancel_order_btn);
@@ -843,14 +843,14 @@ public class paypal_checkout extends Set {
 				//Thread.sleep(5000);
 			 
 			
-				driver.get("https://www.slideteam.net/checkout/");
-		Thread.sleep(2000);	
+			//	driver.get("https://www.slideteam.net/checkout/");
+		//Thread.sleep(2000);	
 		
 		// Switch To Default Window
 				  
-				  driver.switchTo().window(currentWindow);
-		 driver.get("https://www.slideteam.net/pricing");
-		Thread.sleep(2000);
+			//	  driver.switchTo().window(currentWindow);
+		// driver.get("https://www.slideteam.net/pricing");
+		//Thread.sleep(2000);
 				 // driver.switchTo().window(currentWindow);
 			 
 		    
