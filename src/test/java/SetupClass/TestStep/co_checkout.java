@@ -676,7 +676,7 @@ public class co_checkout extends Set{
 		 driver.get("https://www.slideteam.net/checkout/");
 		Thread.sleep(2000);
 		 driver.get("https://www.slideteam.net/pricing");
-		Thread.sleep(2000);
+		Thread.sleep(9000);
 		
 		 WebElement join_now_btn1  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Individual > div > div.slide-product > div.col-box.table-col.item.last.control > div.col.col2.col-bg2 > span > form > button > span")));
 		js.executeScript("arguments[0].scrollIntoView();",join_now_btn1);
