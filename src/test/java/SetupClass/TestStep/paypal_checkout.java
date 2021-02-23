@@ -916,7 +916,7 @@ try {
 		
 		 WebElement delete_profile = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Delete Profile')]")));
 		js.executeScript("arguments[0].scrollIntoView();",delete_profile);
-		continue_delete.click();
+		delete_profile.click();
 		 Thread.sleep(3000);
 	}
 
