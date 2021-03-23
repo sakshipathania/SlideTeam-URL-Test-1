@@ -499,6 +499,8 @@ public class co_checkout extends Set{
 		       Thread.sleep(4000);
 		WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[3]")));
 				Thread.sleep(2000);
+		js.executeScript("arguments[0].scrollIntoView();",Education);
+		Thread.sleep(3000);
 		Education.click();
 		Thread.sleep(3000);
 	
@@ -524,6 +526,8 @@ public class co_checkout extends Set{
 		       Thread.sleep(4000);
 		WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[3]")));
 				Thread.sleep(2000);
+		js.executeScript("arguments[0].scrollIntoView();",Education);
+		Thread.sleep(3000);
 		Education.click();
 		Thread.sleep(3000);
 	
@@ -549,6 +553,8 @@ public class co_checkout extends Set{
 		       Thread.sleep(4000);
 		WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[3]")));
 				Thread.sleep(2000);
+		js.executeScript("arguments[0].scrollIntoView();",Education);
+		Thread.sleep(3000);
 		Education.click();
 		Thread.sleep(3000);
 	
@@ -574,6 +580,8 @@ public class co_checkout extends Set{
 		       Thread.sleep(4000);
 		WebElement Education = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[3]")));
 				Thread.sleep(2000);
+		js.executeScript("arguments[0].scrollIntoView();",Education);
+		Thread.sleep(3000);
 		Education.click();
 		Thread.sleep(3000);
 	
