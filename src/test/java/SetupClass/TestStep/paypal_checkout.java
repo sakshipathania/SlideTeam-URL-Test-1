@@ -896,9 +896,7 @@ public class paypal_checkout extends Set {
 		 Thread.sleep(3000);
 		 
 		
-
-
-/*try {
+                     try {
 			WebElement iframe = driver.findElement(By.id("livechat-full-view"));
 			if(iframe.isDisplayed()) {
 				driver.switchTo().frame(iframe);   
@@ -939,8 +937,8 @@ public class paypal_checkout extends Set {
 		js.executeScript("arguments[0].scrollIntoView();",delete_profile);
 		delete_profile.click();
 		 Thread.sleep(3000);
-	} */
-		try {
+	} 
+		/*try {
 			WebElement logout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
 			if (logout.isEnabled()) {
 				logout.click();
@@ -950,7 +948,7 @@ public class paypal_checkout extends Set {
 			}
 		} catch (NoSuchElementException Ext) {
 
-		}
+		}*/
 
 	}
 }
