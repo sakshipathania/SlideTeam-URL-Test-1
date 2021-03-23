@@ -357,6 +357,8 @@ public class paypal_checkout extends Set {
 		
 		WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[2]")));
 				Thread.sleep(2000);
+		js.executeScript("arguments[0].scrollIntoView();",Business_Team);
+		Thread.sleep(3000);
 		Business_Team.click();
 		Thread.sleep(3000);
 		
@@ -383,6 +385,8 @@ public class paypal_checkout extends Set {
 		       Thread.sleep(4000);
 		WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[2]")));
 				Thread.sleep(2000);
+		js.executeScript("arguments[0].scrollIntoView();",Business_Team);
+		Thread.sleep(3000);
 		Business_Team.click();
 		Thread.sleep(3000);
 	
@@ -409,6 +413,8 @@ public class paypal_checkout extends Set {
 		       Thread.sleep(4000);
 		WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[2]")));
 				Thread.sleep(2000);
+		js.executeScript("arguments[0].scrollIntoView();",Business_Team);
+		Thread.sleep(3000);
 		Business_Team.click();
 		Thread.sleep(3000);
 	
@@ -435,6 +441,8 @@ public class paypal_checkout extends Set {
 		       Thread.sleep(4000);
 		WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[2]")));
 				Thread.sleep(2000);
+		js.executeScript("arguments[0].scrollIntoView();",Business_Team);
+		Thread.sleep(3000);
 		Business_Team.click();
 		Thread.sleep(3000);
 	
@@ -461,6 +469,8 @@ public class paypal_checkout extends Set {
 		       Thread.sleep(4000);
 		WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[2]")));
 				Thread.sleep(2000);
+		js.executeScript("arguments[0].scrollIntoView();",Business_Team);
+		Thread.sleep(3000);
 		Business_Team.click();
 		Thread.sleep(3000);
 	
@@ -487,6 +497,8 @@ public class paypal_checkout extends Set {
 		       Thread.sleep(4000);
 		WebElement Business_Team = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/button[2]")));
 				Thread.sleep(2000);
+		js.executeScript("arguments[0].scrollIntoView();",Business_Team);
+		Thread.sleep(3000);
 		Business_Team.click();
 		Thread.sleep(3000);
 	
