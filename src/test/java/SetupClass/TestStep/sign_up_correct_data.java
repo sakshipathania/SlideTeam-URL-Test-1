@@ -179,7 +179,7 @@ public class sign_up_correct_data extends Set {
 		
 
 
-/*try {
+                try {
 			WebElement iframe = driver.findElement(By.id("livechat-full-view"));
 			if(iframe.isDisplayed()) {
 				driver.switchTo().frame(iframe);   
@@ -220,8 +220,13 @@ public class sign_up_correct_data extends Set {
 		js.executeScript("arguments[0].scrollIntoView();",delete_profile);
 		delete_profile.click();
 		 Thread.sleep(3000);
-	}*/
-		try {
+		
+		WebElement delete_profile_coupon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,' No, delete my account')]")));
+		js.executeScript("arguments[0].scrollIntoView();",delete_profile_coupon);
+		delete_profile_coupon.click();
+		 Thread.sleep(3000);
+	}
+		/*try {
 			WebElement logout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
 			if (logout.isEnabled()) {
 				logout.click();
@@ -231,7 +236,7 @@ public class sign_up_correct_data extends Set {
 			}
 		} catch (NoSuchElementException Ext) {
 
-		}
+		}*/
 
 	}
 	
