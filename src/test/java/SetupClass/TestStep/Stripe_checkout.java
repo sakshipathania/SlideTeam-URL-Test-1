@@ -643,33 +643,6 @@ public class Stripe_checkout extends Set{
 	     try {
 		Thread.sleep(1400);
 		// select 2co option
-		WebElement co_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#tco_checkout")));
-		Thread.sleep(2000);
-	         co_btn.click();
-		Thread.sleep(5000);
-	     } catch( NoSuchElementException popup) { 
-	     }
-		
-		// place order button 
-		try {
-			
-		 WebElement place_order_btn  =  driver.findElement(By.cssSelector("#place-order-trigger > span"));
-			Thread.sleep(2000);
-			js.executeScript("arguments[0].scrollIntoView();",place_order_btn);	
-			//js.executeScript("arguments[0].click();", place_order_btn);
-			Thread.sleep(2000);
-		    place_order_btn.click();
-			Thread.sleep(5000);
-		} catch (NoSuchElementException popup) {
-		}
-		
-		
-	}
-
-	@Then("^paypal popup appears and user navigates back to my account (\\d+)CO$")
-	public void paypal_popup_appears_and_user_navigates_back_to_my_account_CO(int arg1) throws Throwable {
-	    Thread.sleep(1400);
-		// select 2co option
 		WebElement co_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#amasty_stripe")));
 		Thread.sleep(2000);
 	         co_btn.click();
@@ -692,7 +665,9 @@ public class Stripe_checkout extends Set{
 	         Stripe_card.sendKeys("4242424242424242");
 		Thread.sleep(5000);
 		   //  Stripe_card.clear();
-		Thread.sleep(5000);
+		  } catch( NoSuchElementException popup) { 
+	     }
+                Thread.sleep(5000);
 		// place order button 
 		try {
 			
@@ -713,6 +688,7 @@ public class Stripe_checkout extends Set{
 		}
 		
 	}
+
 
 	@Then("^user deleted the account (\\d+)CO$")
 	public void user_deleted_the_account_CO(int arg1) throws Throwable {
