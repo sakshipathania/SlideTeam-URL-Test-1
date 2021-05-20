@@ -26,5 +26,4 @@ Then user is redirected to pricing page and check the text18 2CO
 Then user is redirected to pricing page and choose a plan to pay 2CO
 Then user is redirected to checkout page 2CO
 Then user proceed to pay with 2CO 2CO
-Then paypal popup appears and user navigates back to my account 2CO
 Then user deleted the account 2CO
