@@ -1,6 +1,6 @@
-@2CO_checkout
-Feature:  2CO Checkout
-Scenario: Test 2CO checkout
+@Stripe_checkout
+Feature:  Stripe Checkout
+Scenario: Test Stripe checkout
 
 Given user is already on Website Home Page 2CO
 Then user navigates to sign up page 2CO
