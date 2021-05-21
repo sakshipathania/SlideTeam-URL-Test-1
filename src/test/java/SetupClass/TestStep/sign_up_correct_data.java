@@ -197,7 +197,7 @@ public class sign_up_correct_data extends Set {
 		js.executeScript("arguments[0].scrollIntoView();",delete_profile_coupon);
 		delete_profile_coupon.click();
 		 Thread.sleep(3000);
-
+	}
 	
 	
 }
