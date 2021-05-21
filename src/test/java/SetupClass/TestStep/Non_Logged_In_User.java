@@ -43,11 +43,15 @@ public class Non_Logged_In_User extends Set {
 
 	@Then("^user is redirected to Login page viii$")
 	public void user_is_redirected_to_Login_page_viii() throws Throwable {
-	   
+	   WebElement sign_up_btn = driver.findElement(By.cssSelector("#maincontent > div.columns > div > div.login-container.container > div.block.block-new-customer > div.block-content > div > div > a > span"));
+		Thread.sleep(2000);	
+		sign_up_btn.click();
+		Thread.sleep(2000);
 	}
   
   @Then("^user sign up with correct details viii$")
 	public void user_sign_up_with_correct_details_viii() throws Throwable {
+		Thread.sleep(2000);
 		int leftLimit = 97; // letter 'a'
 	    int rightLimit = 122; // letter 'z'
 	    int targetStringLength = 10;
