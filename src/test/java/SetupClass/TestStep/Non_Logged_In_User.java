@@ -46,21 +46,62 @@ public class Non_Logged_In_User extends Set {
 	   
 	}
   
-  @Then("^user login with correct details viii$")
-	public void user_login_with_correct_details_viii() throws Throwable {
-		WebElement username = wait.until(ExpectedConditions.elementToBeClickable(By.id("email")));
+  @Then("^user sign up with correct details viii$")
+	public void user_sign_up_with_correct_details_viii() throws Throwable {
+		int leftLimit = 97; // letter 'a'
+	    int rightLimit = 122; // letter 'z'
+	    int targetStringLength = 10;
+	    Random random = new Random();
+	    StringBuilder buffer = new StringBuilder(targetStringLength);
+	    for (int i = 0; i < targetStringLength; i++) {
+	        int randomLimitedInt = leftLimit + (int) 
+	          (random.nextFloat() * (rightLimit - leftLimit + 1));
+	        buffer.append((char) randomLimitedInt);
+	    }
+	    String generatedString = buffer.toString();
+	 
+	    System.out.println(generatedString);
+	    
+	    String signup_email=generatedString;
+	    String full_email="selenium.testing."+generatedString+"@gmail.com";
+	    System.out.println(full_email);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+		//driver.findElement(By.id("email_address")).sendKeys(full_email);
+		
+
 		Thread.sleep(2000);
-		username.sendKeys("sumit@slideteam.net");
+	    WebElement new_email_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("email_address")));
+		Thread.sleep(2000);
+	    new_email_signup.sendKeys(full_email);
 		Thread.sleep(2000);
 		
-		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.id("pass")));
+		  WebElement new_fname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("firstname")));
 		Thread.sleep(2000);
-		password.sendKeys("sumittest@21234");
+	    new_fname_signup.sendKeys("Selenium");
+		Thread.sleep(2000);
+
+	    WebElement new_lname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("lastname")));
+		Thread.sleep(2000);
+	    new_lname_signup.sendKeys("Testing");
 		Thread.sleep(2000);
 		
-		WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.id("send2")));
+		 WebElement new_pwd_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password")));
+			Thread.sleep(2000);
+		    new_pwd_signup.sendKeys("selenium@123");
+			Thread.sleep(2000);
+
+		    WebElement new_pwd1_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password-confirmation")));
+			Thread.sleep(2000);
+		    new_pwd1_signup.sendKeys("selenium@123");
+			Thread.sleep(2000);
+		
+		WebElement new_captcha_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("captcha_user_create")));
 		Thread.sleep(2000);
-		login_btn.click();
+	    new_captcha_signup.sendKeys("Aj7W2mtf9namwf55");
+		
+		WebElement new_btn_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".submit")));
+		Thread.sleep(2000);
+	    new_btn_signup.click();
 		Thread.sleep(2000);
 		
 		driver.navigate().refresh();
@@ -73,6 +114,15 @@ public class Non_Logged_In_User extends Set {
 
 	@Then("^user download the product viii$")
 	public void user_download_the_product_viii() throws Throwable {
+		
+		Thread.sleep(5000);
+		Actions actions = new Actions(driver);
+		WebElement free_ppt_btn1=wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Free Stuff")));
+		actions.moveToElement(free_ppt_btn1).moveToElement(driver.findElement(By.xpath("//a[contains(text(),'Free PPTs')]"))).click().build().perform();
+		Thread.sleep(7000);
+		driver.get("https://www.slideteam.net/circular-flow-of-process-4-stages-powerpoint-slides-templates.html");
+		Thread.sleep(3000);
+		
 		Thread.sleep(3000);
 	    // driver.get("https://www.slideteam.net/puzzles-with-multiple-business-icons-flat-powerpoint-design.html");
 		//Thread.sleep(2000);
@@ -87,18 +137,35 @@ public class Non_Logged_In_User extends Set {
 	@Then("^user logout from website viii$")
 	public void user_logout_from_website_viii() throws Throwable {
 	 
-		Thread.sleep(1000);
-		try {
-			WebElement logout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
-			if (logout.isEnabled()) {
-				logout.click();
-				Thread.sleep(8000);
-				driver.navigate().refresh();
-				Thread.sleep(2000);
-			}
-		} catch (NoSuchElementException Ext) {
+		 Thread.sleep(3000);
 
-		}
+		
+		 WebElement account = driver.findElement(By.xpath("//a[contains(.,'My Account')]"));
+			  Thread.sleep(3000);
+			account.click();
+		 Thread.sleep(3000);
+		 
+		
+
+		 WebElement delete_account = driver.findElement(By.cssSelector("#clicking"));
+		js.executeScript("arguments[0].scrollIntoView();",delete_account);
+		 delete_account.click();
+		 Thread.sleep(3000);
+		WebElement delete_reason = driver.findElement(By.cssSelector("#exampleRadios1"));
+		Thread.sleep(3000);
+		delete_reason.click();
+		Thread.sleep(3000);
+		
+		 WebElement delete_profile = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#delete-final")));
+		js.executeScript("arguments[0].scrollIntoView();",delete_profile);
+		delete_profile.click();
+		 Thread.sleep(3000);
+		
+		WebElement delete_profile_coupon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#flipModal > div > div > div.modal-footer.button_action > button.btn.btn-default.button_2")));
+		js.executeScript("arguments[0].scrollIntoView();",delete_profile_coupon);
+		delete_profile_coupon.click();
+		 Thread.sleep(3000);
+
 		
 	}
 }
