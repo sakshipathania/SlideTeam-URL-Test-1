@@ -23,7 +23,7 @@ public class Non_Logged_In_User extends Set {
 	public void user_is_already_on_PDP_Page_MD_viii() throws Throwable {
 		
 		Thread.sleep(7000);
-		driver.get("https://www.slideteam.net/change-management-powerpoint-presentation-slides.html);
+		driver.get("https://www.slideteam.net/change-management-powerpoint-presentation-slides.html");
 		Thread.sleep(2000);
 	    
 	}
