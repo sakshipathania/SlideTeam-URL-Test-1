@@ -160,17 +160,7 @@ public class sign_up_correct_data extends Set {
 			Thread.sleep(2000);
 		    join_now_btn.click();
 			Thread.sleep(6000);
-		 try {
-		     WebElement Pricing=driver.findElement(By.cssSelector("body > div.page-wrapper > header > div.header.content > div.panel.wrapper > div > nav > div > div > ul > li:nth-child(1) > a"));
-		     Thread.sleep(4000);
-		js.executeScript("window.scrollBy(0,1000)");
-		 WebElement join_now_btn1  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/div/div[1]/div/div[2]/div[4]/div[3]/span/form/button/span")));
-			Thread.sleep(2000);
-		    join_now_btn1.click();
-			Thread.sleep(6000);
-	     } catch( NoSuchElementException popup) { 
-	     }
-	   
+		
 	}
 
 	@Then("^user download a free product cd$")
