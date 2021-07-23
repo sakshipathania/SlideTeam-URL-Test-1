@@ -16,14 +16,14 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class sign_up_correct_data extends Set {
-	WebDriverWait wait = new WebDriverWait(driver,50);
+	WebDriverWait wait = new WebDriverWait(driver,8);
        JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	@Given("^user is already on sign up page cd$")
 	public void user_is_already_on_sign_up_page_cd() throws InterruptedException  {
 	    
 		driver.get(AppURL);
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(8, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
 	    Thread.sleep(2000);
 	    try {
