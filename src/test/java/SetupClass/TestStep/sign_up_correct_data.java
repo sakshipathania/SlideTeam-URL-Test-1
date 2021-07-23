@@ -232,9 +232,10 @@ public class sign_up_correct_data extends Set {
        Thread.sleep(3000);
 
 		
-		 WebElement account = driver.findElement(By.xpath("//a[contains(.,'My Account')]"));
+		// WebElement account = driver.findElement(By.xpath("//a[contains(.,'My Account')]"));
 			  Thread.sleep(3000);
-			account.click();
+			//account.click();
+		driver.get("https://www.slideteam.net/customer/account/");
 		 Thread.sleep(3000);
 		 
 		
