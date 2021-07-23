@@ -140,31 +140,101 @@ public class sign_up_correct_data extends Set {
 	@Then("^user lands on pricing page and then user go to free ppts page cd$")
 	public void user_lands_on_pricing_page_and_then_user_go_to_free_ppts_page_cd() throws InterruptedException  {
 		
-		Thread.sleep(5000);
-		Actions actions = new Actions(driver);
-		WebElement free_ppt_btn1=wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Free Stuff")));
-		actions.moveToElement(free_ppt_btn1).moveToElement(driver.findElement(By.xpath("//a[contains(text(),'Free PPTs')]"))).click().build().perform();
-		Thread.sleep(7000);
-		//WebElement free_ppt_btn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/header/div[1]/div[2]/div/nav/div/div/ul/li[2]/div/ul/li[1]/a")));
-	    //free_ppt_btn.click();
-	    //Thread.sleep(2000);
+		Thread.sleep(1000);
+		WebElement Popular_ppt= driver.findElement(By.cssSelector("body > div.page-wrapper > header > div.header.content > div.panel.wrapper > div > nav > div > div > ul > li:nth-child(3) > a"));
+	     Thread.sleep(1000);
+		Popular_ppt.click();
+	
+		Thread.sleep(2000);
+		WebElement Popular_product= driver.findElement(By.cssSelector("/html/body/div[2]/main/div[2]/div/div[4]/div[2]/ol/li[2]/div/a/img"));
+		Thread.sleep(3000);
+		Popular_product.click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.cssSelector("#clicking")).click();
+		Thread.sleep(8000);
+		
+		
+		js.executeScript("window.scrollBy(0,1000)");
+		 WebElement join_now_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(.,'Join now')])[8]")));
+			Thread.sleep(2000);
+		    join_now_btn.click();
+			Thread.sleep(6000);
+		 try {
+		     WebElement Pricing=driver.findElement(By.cssSelector("body > div.page-wrapper > header > div.header.content > div.panel.wrapper > div > nav > div > div > ul > li:nth-child(1) > a"));
+		     Thread.sleep(4000);
+		js.executeScript("window.scrollBy(0,1000)");
+		 WebElement join_now_btn1  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/div/div[1]/div/div[2]/div[4]/div[3]/span/form/button/span")));
+			Thread.sleep(2000);
+		    join_now_btn1.click();
+			Thread.sleep(6000);
+	     } catch( NoSuchElementException popup) { 
+	     }
 	   
 	}
 
 	@Then("^user download a free product cd$")
 	public void user_download_a_free_product_cd() throws InterruptedException  {
-		//driver.findElement(By.cssSelector("li.item:nth-child(8) > div:nth-child(1) > div:nth-child(2) > strong:nth-child(1) > span:nth-child(1) > a:nth-child(1)")).click();
-		//Thread.sleep(3000);
+		try
+		{
+			WebElement cp_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='paypal_express']")));
+			Thread.sleep(2000);
+		    cp_btn.click();
+		    Thread.sleep(3000);
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+		}
+		  Thread.sleep(3000);
+		try
+		{
+			  WebElement place_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Place Order')]")));
+			js.executeScript("arguments[0].scrollIntoView();",place_order_btn);	
+			Thread.sleep(3000);
+		          place_order_btn.click();
+			  Thread.sleep(5000);
+		}
+		 catch (Exception e) {
+			 //TODO: handle exception	 
+	        } 
 		
-		driver.get("https://www.slideteam.net/circular-flow-of-process-4-stages-powerpoint-slides-templates.html");
-		Thread.sleep(3000);
+		  Thread.sleep(3000);
+	    // Maximize Window
+		  driver.manage().window().maximize();
 		
-		WebElement dwnd_btn = driver.findElement(By.cssSelector("#clicking"));
-		js.executeScript("arguments[0].scrollIntoView();", dwnd_btn);
-		 dwnd_btn.click();
-		Thread.sleep(3000);
-	   driver.get("https://www.slideteam.net/");
-	   Thread.sleep(3000);
+		  // Store the CurrentWindow for future reference
+		 // String handle = " ";
+		  String currentWindow = driver.getWindowHandle();
+		  String popupWindowHandle = null;
+		   
+		  // Switch To Popup Window
+		  
+		  for(String handle : driver.getWindowHandles()){
+		   if(!handle.equals(currentWindow)){
+		    
+		    popupWindowHandle = handle;
+		     driver.switchTo().window(popupWindowHandle);
+		   }
+		  }
+		  
+		 
+		  
+		// page title
+		  String pp_page_title=driver.getTitle();
+			Thread.sleep(3000);
+		    System.out.println("Title of the Page is --> "+pp_page_title);
+		    
+		 // place order button 
+			// WebElement cancel_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(.,'Cancel and return to Slideteam Pte. Ltd.')])[2]")));
+			//	js.executeScript("arguments[0].scrollIntoView();",cancel_order_btn);
+		//Thread.sleep(2000);
+		//	    cancel_order_btn.click();
+		//		Thread.sleep(5000);
+
+				 // Switch To Default Window
+		driver.get("https://www.slideteam.net/checkout/");
+		Thread.sleep(2000);		  
+				  driver.switchTo().window(currentWindow);
 	}
 
 	@Then("^user delete the new account created cd$")
