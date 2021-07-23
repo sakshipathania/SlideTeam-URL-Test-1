@@ -165,7 +165,7 @@ public class sign_up_correct_data extends Set {
 
 	@Then("^user download a free product cd$")
 	public void user_download_a_free_product_cd() throws InterruptedException  {
-		try
+		/*try
 		{
 			WebElement cp_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='paypal_express']")));
 			Thread.sleep(2000);
@@ -174,7 +174,7 @@ public class sign_up_correct_data extends Set {
 		}
 		catch (Exception e) {
 			// TODO: handle exception
-		}
+		}*/
 		  Thread.sleep(3000);
 		try
 		{
