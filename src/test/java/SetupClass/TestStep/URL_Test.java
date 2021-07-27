@@ -27,11 +27,10 @@ public class URL_Test extends Set {
 		
 		Thread.sleep(3000);
 		try {
-		WebElement Url1 = driver.findElements(By.xpath("//div[@class='form-group buttons']/div/input"));
-                    Assert.assertTrue(false);
+		WebElement Url1 = driver.findElements(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div/h3"));
+                    Assert.assertTrue(true);
 		}
-		catch {  Assert.assertTrue(true); }
-		
+		catch {  Assert.assertTrue(false); }
 
 	
 	}
