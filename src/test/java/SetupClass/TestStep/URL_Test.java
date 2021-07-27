@@ -30,7 +30,7 @@ public class URL_Test extends Set {
 		WebElement Url1 = driver.findElements(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div/h3"));
                     Assert.assertTrue(true);
 		}
-		catch ()
+		catch (Exception e)
 		{  Assert.assertTrue(false); }
 
 	
