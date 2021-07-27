@@ -3,6 +3,7 @@ package SetupClass.TestStep;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -28,7 +29,7 @@ public class URL_Test extends Set {
 		
 		Thread.sleep(3000);
 		try {
-		WebElement Url1 = driver.findElements(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div/h3"));
+		List<WebElement>  Url1 = driver.findElements(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div/h3"));
                     Assert.assertTrue(true);
 		}
 		catch (Exception e)
