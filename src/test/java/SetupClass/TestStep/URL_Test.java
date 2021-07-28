@@ -33,7 +33,7 @@ public class URL_Test extends Set {
 		List<WebElement> dynamicElement = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
 
 		if (dynamicElement.size() != 0) {
-                               System.out.println("Element is present");
+                               Assert.fail("Element is present");
                                 } else {
                                   System.out.println("Element is not present");
                                   }
@@ -47,7 +47,7 @@ public class URL_Test extends Set {
 		List<WebElement> dynamicElement1 = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
 
 		if (dynamicElement1.size() != 0) {
-                               System.out.println("Element is present");
+                               Assert.fail("Element is present");
                                 } else {
                                   System.out.println("Element is not present");
                                   }
@@ -75,7 +75,7 @@ public class URL_Test extends Set {
 		List<WebElement> dynamicElement3 = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
 
 		if (dynamicElement3.size() != 0) {
-                               System.out.println("Element is present");
+                              Assert.fail("Element is present");
                                 } else {
                                   System.out.println("Element is not present");
                                   }
@@ -89,7 +89,7 @@ public class URL_Test extends Set {
 		List<WebElement> dynamicElement4 = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
 
 		if (dynamicElement4.size() != 0) {
-                               System.out.println("Element is present");
+                               Assert.fail("Element is present");
                                 } else {
                                   System.out.println("Element is not present");
                                   }
@@ -103,7 +103,7 @@ public class URL_Test extends Set {
 		List<WebElement> dynamicElement5 = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
 
 		if (dynamicElement5.size() != 0) {
-                               System.out.println("Element is present");
+                              Assert.fail("Element is present");
                                 } else {
                                   System.out.println("Element is not present");
                                   }
