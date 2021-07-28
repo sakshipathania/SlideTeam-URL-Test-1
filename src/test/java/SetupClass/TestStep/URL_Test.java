@@ -29,7 +29,7 @@ public class URL_Test extends Set {
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 		Thread.sleep(3000);
-		
+		try{
 		Url1 = driver.findElements(By.xpath("//*[contains(text(),'Database')]")).isDisplayed();
                     Assert.assertTrue(false);
 		}
