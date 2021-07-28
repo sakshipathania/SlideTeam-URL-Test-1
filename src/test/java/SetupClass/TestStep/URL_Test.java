@@ -52,7 +52,7 @@ public class URL_Test extends Set {
                                   System.out.println("Element is not present");
                                   }
 		
-	driver.get("https://www2.slideteam.net/adminer.php");
+	driver.get("https://test-admin.slideteam.net/adminer.php");
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 		Thread.sleep(3000);
@@ -67,7 +67,7 @@ public class URL_Test extends Set {
 		
 		Thread.sleep(3000);
 		
-	       driver.get("https://www2.slideteam.net/adminer.php");
+	       driver.get("https://www.slideteam.net/adminer.php");
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 		Thread.sleep(3000);
@@ -81,7 +81,7 @@ public class URL_Test extends Set {
                                   }
 		
 		Thread.sleep(3000);
-	       driver.get("https://www2.slideteam.net/adminer.php");
+	       driver.get("https://www4.slideteam.net/adminer.php");
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 		Thread.sleep(3000);
@@ -95,7 +95,7 @@ public class URL_Test extends Set {
                                   }
 		
 		Thread.sleep(3000);
-	        driver.get("https://www2.slideteam.net/adminer.php");
+	        driver.get("https://www5.slideteam.net/adminer.php");
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 		Thread.sleep(3000);
