@@ -30,7 +30,7 @@ public class URL_Test extends Set {
 		
 		Thread.sleep(3000);
 		try{
-		WebElement Url1 = driver.findElements(By.xpath("//*[contains(text(),'Database')]")).isDisplayed();
+		WebElement Url1 = driver.findElement(By.xpath("//*[contains(text(),'Database')]")).isDisplayed();
                     Assert.assertTrue(false);
 		}
 		catch (Exception e)
