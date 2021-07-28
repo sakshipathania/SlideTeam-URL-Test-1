@@ -29,13 +29,14 @@ public class URL_Test extends Set {
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 		Thread.sleep(3000);
-		try{
-		WebElement Url1 = driver.findElement(By.xpath("//*[contains(text(),'Database')]")).isDisplayed();
-                    Assert.assertTrue(false);
-		}
-		catch (Exception e)
-		{  Assert.assertTrue(true); }
+		
+		List<WebElement> dynamicElement = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
 
+		if (dynamicElement.size() != 0) {
+                               System.out.println("Element is not present");
+                                } else {
+                                  System.out.println("Element is present");
+                                  }
 	
 	}
 }
