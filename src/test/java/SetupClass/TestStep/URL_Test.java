@@ -37,6 +37,77 @@ public class URL_Test extends Set {
                                 } else {
                                   System.out.println("Element is not present");
                                   }
+		Thread.sleep(3000);
+		
+	        driver.get("https://test1.slideteam.net/adminer.php");
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		
+		Thread.sleep(3000);
+		
+		List<WebElement> dynamicElement1 = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
+
+		if (dynamicElement1.size() != 0) {
+                               System.out.println("Element is present");
+                                } else {
+                                  System.out.println("Element is not present");
+                                  }
+		
+	driver.get("https://www2.slideteam.net/adminer.php");
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		
+		Thread.sleep(3000);
+		
+		List<WebElement> dynamicElement2 = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
+
+		if (dynamicElement2.size() != 0) {
+                               System.out.println("Element is present");
+                                } else {
+                                  System.out.println("Element is not present");
+                                  }
+		
+		Thread.sleep(3000);
+		
+	       driver.get("https://www2.slideteam.net/adminer.php");
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		
+		Thread.sleep(3000);
+		
+		List<WebElement> dynamicElement3 = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
+
+		if (dynamicElement3.size() != 0) {
+                               System.out.println("Element is present");
+                                } else {
+                                  System.out.println("Element is not present");
+                                  }
+		
+		Thread.sleep(3000);
+	       driver.get("https://www2.slideteam.net/adminer.php");
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		
+		Thread.sleep(3000);
+		
+		List<WebElement> dynamicElement4 = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
+
+		if (dynamicElement4.size() != 0) {
+                               System.out.println("Element is present");
+                                } else {
+                                  System.out.println("Element is not present");
+                                  }
+		
+		Thread.sleep(3000);
+	        driver.get("https://www2.slideteam.net/adminer.php");
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		
+		Thread.sleep(3000);
+		
+		List<WebElement> dynamicElement5 = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
+
+		if (dynamicElement5.size() != 0) {
+                               System.out.println("Element is present");
+                                } else {
+                                  System.out.println("Element is not present");
+                                  }
 	
+		
 	}
 }
