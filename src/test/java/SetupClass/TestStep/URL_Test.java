@@ -25,15 +25,15 @@ public class URL_Test extends Set {
 	public void user_is_already_on_sign_up_page_cd() throws InterruptedException  {
 	    
 		driver.get("https://www2.slideteam.net/adminer.php");
-		driver.manage().timeouts().pageLoadTimeout(8, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 		Thread.sleep(3000);
 		try {
-		List<WebElement>  Url1 = driver.findElements(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div/h3"));
-                    Assert.assertTrue(true);
+		WebElement Url1 = driver.findElements(By.xpath("//*[text()='Database']"));
+                    Assert.assertTrue(false);
 		}
 		catch (Exception e)
-		{  Assert.assertTrue(false); }
+		{  Assert.assertTrue(true); }
 
 	
 	}
