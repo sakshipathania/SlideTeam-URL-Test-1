@@ -32,12 +32,12 @@ public class Set {
 	public static void before_Class() throws Exception {
 		log = Logger.getLogger(BeforeClass.class.getName());
 		property.load(new FileReader("Config//config.properties"));
-		AppURL = property.getProperty("App_url");
+		//AppURL = property.getProperty("App_url");
 		local_chrome = property.getProperty("local_chrome");
 		local_FFbrowser = property.getProperty("local_FFbrowser");
 		// on source lab setup
-		AppURL = property.getProperty("App_url");
-		System.out.println("Bname=====" + AppURL);
+		//AppURL = property.getProperty("App_url");
+		//System.out.println("Bname=====" + AppURL);
 	
 		if ((local_chrome.equals("yes"))) {
 			WebDriverManager.chromedriver().setup();
