@@ -33,9 +33,9 @@ public class URL_Test extends Set {
 		List<WebElement> dynamicElement = driver.findElements(By.xpath("//*[contains(text(),'Database')]"));
 
 		if (dynamicElement.size() != 0) {
-                               System.out.println("Element is not present");
+                               System.out.println("Element is present");
                                 } else {
-                                  System.out.println("Element is present");
+                                  System.out.println("Element is not present");
                                   }
 	
 	}
