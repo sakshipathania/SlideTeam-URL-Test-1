@@ -25,7 +25,7 @@ public class URL_Test extends Set {
 	@Given("^user is already on sign up page cd$")
 	public void user_is_already_on_sign_up_page_cd() throws InterruptedException  {
 	    
-		driver.get("https://www2.slideteam.net/adminer.php");
+		driver.get("https://test2.slideteam.net/adminer.php");
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 		Thread.sleep(3000);
